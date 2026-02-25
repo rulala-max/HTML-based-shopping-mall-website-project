@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CookingBox</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <!-- 슬라이드배너사용위한 swiper css 라이브러리  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!-- Swiper js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!--구글에서 제공하는 아이콘사용위해: 검색아이콘  -->
+    <link rel="stylesheet" href="./css/headfoot.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/main.js"></script>
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="search">
+                <input type="text" name="item"  placeholder="검색어를 입력하세요" ><span class="material-icons">search</span></input>
+            </div> 
+    
+            <div class="logo"><a href="index.html">Cooking Box</a></div>
+            
+            <section class="moveNavi">
+                <div class="category">
+                    <ul>
+                        <li class="cate">
+                            <a href="event.html" class="cate1">EVENT</a>
+                        <li class="cate">
+                            <a href="prodlist.html" class="cate1">밥 · 죽</a>
+                            <ul class="drawer">
+                                <li><a href="#">죽류</a></li>
+                                <li><a href="#">초밥</a></li>
+                                <li><a href="#">볶음밥 · 비빔밥</a></li>
+                                <li><a href="#">김밥</a></li>
+                            </ul>
+                        </li>    
+                        </li>
+                        <li class="cate">
+                            <a href="#" class="cate1">면류</a>
+                            <ul class="drawer">
+                                <li><a href="#">중식</a></li>
+                                <li><a href="#">양식</a></li>
+                                <li><a href="#">일식</a></li>
+                                <li><a href="#">한식</a></li>
+                            </ul>
+                        </li>
+                        <li class="cate">
+                            <a href="#" class="cate1">찌개류</a>
+                            <ul class="drawer">
+                                <li><a href="#">맑은찌개</a></li>
+                                <li><a href="#">매운찌개</a></li>
+                                <li><a href="#">나베</a></li>
+                            </ul>
+                        <li class="cate">
+                            <a href="#" class="cate1">육류요리</a>
+                            <ul class="drawer">
+                                <li><a href="#">해산물</a></li>
+                                <li><a href="#">소고기</a></li>
+                                <li><a href="#">돼지고기</a></li>
+                                <li><a href="#">닭고기</a></li>
+                                <li><a href="#">양고기</a></li>
+                                <li><a href="#">야식</a></li>
+                            </ul>
+                        </li>
+                        <li class="cate">
+                            <a href="#" class="cate1">동남아</a>
+                            <ul class="drawer">
+                                <li><a href="#">분짜</a></li>
+                                <li><a href="#">월남쌈</a></li>
+                                <li><a href="#">쌀국수</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li class="cate">
+                            <a href="#" class="cate1">디저트</a>
+                            <ul class="drawer">
+                                <li><a href="#">푸딩</a></li>
+                                <li><a href="#">전통 디저트</a></li>
+                                <li><a href="#">쿠키</a></li>
+                                <li><a href="#">빼빼로</a></li>
+                            </ul>
+                        </li>
+                        <li class="cate">
+                            <a href="#" class="cate1">분식</a>
+                            <ul class="drawer">
+                                <li><a href="#">떡볶이</a></li>
+                                <li><a href="#">튀김</a></li>
+                                <li><a href="#">만두</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
+            <div class="navigation">
+                
+                <div><a href="notice.html">공지사항</a></div>
+                <div><a href="qna.html">질의응답</a></div>
+                <div><a href="goCart.html">장바구니</a></div>
+                <div><a href="MyPage.html">마이페이지</a></div>
+                <div><a href="login.html">로그인</a></div>
+            </div>
+        </header>
+    </div>    
+        <main>
+            <div class="swiper swiperBanner">
+                <div class="swiper-wrapper"> <!-- 개별슬라이스 래핑 -->
+                    <div class="swiper-slide banner2"></div>
+                    <div class="swiper-slide banner3"></div>
+                    <div class="swiper-slide banner4"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <script>
+                const swiper1 = new Swiper('.swiperBanner', {
+                    
+                    loop: true, //자동재생
+                    loopAdditionalSlides: 1, //자동재생후 딜레이 방지코드
+                    pagination: { //밑에 클릭해서 원하는 배너로 이동하는 점버튼
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                
+                    autoplay: { 
+                        autoplay: true,  //자동슬라이드
+                    delay: 2000, //자동재생 딜레이시간
+                    }
+                    
+                });
+            </script>
+
+
+            <article>
+                <span>이번달 인기상품</span>
+                <div class="swiper swiperItem">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <div class="bestItem">
+                                        <a href="viewdt.html"><img src="./img/sample4.jpg" alt="상품"></a>
+                                        <div class="bestDescript">
+                                            <div class="tasteCodeBox">
+                                                <span class="tasteCode" style="background: #fac8c8;"></span>
+                                            </div>
+                                            <span>나가사키짬뽕</span><br/>
+                                            <span>10,000원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bestItem">
+                                        <a href="viewdt.html"><img src="./img/sample4.jpg" alt="상품"></a>
+                                        <div class="bestDescript">
+                                            <div class="tasteCodeBox">
+                                                <span class="tasteCode" style="background: #fac8c8;"></span>
+                                            </div>
+                                            <span>나가사키짬뽕</span><br/>
+                                            <span>10,000원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bestItem">
+                                        <a href="viewdt.html"><img src="./img/sample4.jpg" alt="상품"></a>
+                                        <div class="bestDescript">
+                                            <div class="tasteCodeBox">
+                                                <span class="tasteCode" style="background: #fac8c8;"></span>
+                                            </div>
+                                            <span>나가사키짬뽕</span><br/>
+                                            <span>10,000원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bestItem">
+                                        <a href="viewdt.html"><img src="./img/sample4.jpg" alt="상품"></a>
+                                        <div class="bestDescript">
+                                            <div class="tasteCodeBox">
+                                                <span class="tasteCode" style="background: #fac8c8;"></span>
+                                            </div>
+                                            <span>나가사키짬뽕</span><br/>
+                                            <span>10,000원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bestItem">
+                                        <a href="viewdt.html"><img src="./img/sample4.jpg" alt="상품"></a>
+                                        <div class="bestDescript">
+                                            <div class="tasteCodeBox">
+                                                <span class="tasteCode" style="background: #fac8c8;"></span>
+                                            </div>
+                                            <span>나가사키짬뽕</span><br/>
+                                            <span>10,000원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <div class="bestItem">
+                                        <a href="#"><img src="./img/sample1.jpg" alt="상품"></a>
+                                        <div class="bestDescript">
+                                            <div class="tasteCodeBox">
+                                                <span class="tasteCode" style="background: #ff0000;"></span>
+                                            </div>
+                                            <span>부대찌개</span><br/>
+                                            <span>10,000원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bestItem">
+                                        <a href="#"><img src="./img/sample2.jpg" alt="상품"></a>
+                                        <div class="bestDescript">
+                                            <div class=" tasteCodeBox">
+                                                <span class="tasteCode" style="background: #efffaa;"></span>
+                                                
+                                            </div>
+                                            <span>쌀국수</span><br/>
+                                            <span>10,000원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bestItem">
+                                        <a href="#"><img src="./img/sample3.jpg" alt="상품"></a>
+                                        <div class="bestDescript">
+                                            <div class="tasteCodeBox">
+                                                <span class="tasteCode" style="background: #ff0d00;"></span>
+                                            </div>
+                                            <span>마라샹궈</span><br/>
+                                            <span>10,000원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bestItem">
+                                        <a href="#"><img src="./img/sample4.jpg" alt="상품"></a>
+                                        <div class="bestDescript">
+                                            <div class="tasteCodeBox">
+                                                <span class="tasteCode" style="background: #fac8c8;"></span>
+                                            </div>
+                                            <span>나가사키짬뽕</span><br/>
+                                            <span>10,000원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bestItem">
+                                        <a href="#"><img src="./img/sample5.jpg" alt="상품"></a>
+                                        <div class="bestDescript">
+                                            <div class="tasteCodeBox">
+                                                <span class="tasteCode" style="background: #ffface;"></span>
+                                            </div>
+                                            <span>까르보나라</span><br/>
+                                            <span>10,000원</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample1.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample2.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample3.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample4.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample5.jpg" alt="상품"></a></div></li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample1.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample2.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample3.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample4.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample5.jpg" alt="상품"></a></div></li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample1.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample2.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample3.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample4.jpg" alt="상품"></a></div></li>
+                                <li><div class="bestItem"><a href="#"><img src="./img/sample5.jpg" alt="상품"></a></div></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!-- 앞뒤 넘기는 버튼 -->
+                    <div class="swiper-button-prev"></div> 
+                    <div class="swiper-button-next"></div>
+                </div>
+            </article>
+            
+            <script>
+                let bullet = ["인기 면류", "야식메뉴", "추천디저트", "재구매 많은 상품", "특가상품"];
+                const swiper2 = new Swiper('.swiperItem', {
+                    // Optional parameters
+                    slidesPerView: 1,//한한번에 보여지는 슬라이드의 숫자
+                    loop: true, //슬라이드 루프모드(처음으로돌아감)
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                        renderBullet: function (index, className) {
+                        return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
+                        }
+                    },
+                    //양옆 넘기기
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+    
+                    
+    
+                    autoplay: {     //슬라이드 자동
+                    delay: 4000, // 넘기기 대기시간
+                    disableOnInteraction: false, // 스와이프 후 자동 재생
+                    },
+                });
+            </script>
+
+        <section>
+            <div class="headcate">
+                <div class="title2">
+                    <h2>콜라보 신상품</h2>
+                </div>
+                <ul class="menuCategory">
+                    <span class="s_title selected"><a href="#">기본정렬</a></span>
+                    <li><a href="#">가격낮은순</a></li>
+                    <li><a href="#">가격높은순</a></li>
+                    <li><a href="#">신상품</a></li>
+                    <li><a href="#">주문량 많은순</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div>
+                <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div><div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div> <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div>
+                <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div><div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div> <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div>
+                
+                
+            </div>
+            
+        </section>
+
+        <section>
+            <div class="headcate">
+                <div class="title3">
+                    <h2>스테디셀러</h2>
+                </div>
+                <ul class="menuCategory">
+                    <span class="s_title selected"><a href="#">기본정렬</a></span>
+                    <li><a href="#">가격낮은순</a></li>
+                    <li><a href="#">가격높은순</a></li>
+                    <li><a href="#">신상품</a></li>
+                    <li><a href="#">주문량 많은순</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div>
+                <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div><div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div> <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div>
+                
+                
+            </div>
+
+            <div>
+                <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div>
+                <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div><div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div> <div class="product">
+                    <div>
+                        <a href="viewdt.html"><img src="./img/sample1.jpg"></a>
+                    </div>   
+                    <a href="viewdt.html"><span class="name">상품</span></a>
+                    <span class="oriPrice">10,000원</span>
+                    <span class="price">11,000원<span class="discount">10%</span></span>
+                    <span class="descript">상품설명</span>
+                </div>
+                
+            </div>
+            
+        </section>
+             
+            
+
+
+    ​
+    
+            
+        </main>
+
+
+        <footer>
+            <!--위로 스크롤 쭉올리는 버튼 -->
+            <div class="up"><span class="material-icons">expand_less</span></div>
+            <div>
+                <ul>
+                    <li><a href="index.html">CookingBox</a></li>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">환불정책</a></li>
+                </ul>
+                <section>
+                    <strong>고객센터 이용안내</strong><br/>
+                    <span>문의  010-0000-0000</span>
+                    <ul>
+                        <li>월~금 | AM 9:00 - PM 05:00</li>
+                        <li>점심시간 | PM 12:00 - PM 01:00</li>
+                        <li>공휴일 | <span>closed</span></li>
+                    </ul>
+                    <ul><li><h3>입금계좌</h3></li>
+                        <li>국민은행 000000000000</li>
+                        <li>신한은행 000000000000</li>
+                        <li>예금주 | 쿠킹박스</li>
+                    </ul>
+                </section>
+                <section>
+                    <strong>주식회사 CookingBox</strong>
+                    <ul>
+                        <li>서울특별시 강서구 강서동 10111 11101호</li>
+                        <li>이메일 | cookingbox@gmail.com</li>
+                    </ul>
+                    <ul>
+                        <li>* 주식회사 쿠킹박스사이트의 상품/판매자/쇼핑정보, 컨텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는  </li>
+                        <li>저작권법, 콘텐츠사업 진흥법 등에 의하여 엄격히 금지됩니다. </li>
+                    </ul>
+                </section>
+                <section>
+                    <strong>MEMBER</strong>
+                    <ul>
+                        <li><a href="goCart.html">장바구니</a></li>
+                        <li><a href="MyPage.html">마이페이지</a></li>
+                        <li><a href="#">주문조회</a></li>
+                        <li><a href="#">회원정보수정</a></li>
+                        <li><a href="#">관심상품</a></li>
+                    </ul>
+                </section>
+                <section class="footerinfo">
+                    <ul>
+                        <li>대표 신서영, 박서영</li>
+                        <li>사업문의 | 000-00-00000 </li>
+                        <li>사업자등록번호 | 0000000000</li>
+                    </ul>
+                </section>
+            </div>
+        </footer>
+    
+</body>
+</html>

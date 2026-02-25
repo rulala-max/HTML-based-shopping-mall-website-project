@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CookingBox</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/headfoot.css">
+    <link rel="stylesheet" href="./css/community.css">
+    <link rel="stylesheet" href="./css/PaynSum.css">
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="logo"><a href="./index.html">Cooking Box</a></div>
+            <section class="moveNavi">
+                <div class="category">
+                    <ul>
+                        <li class="cate">
+                            <a href="event.html" class="cate1">EVENT</a>
+                        <li class="cate">
+                            <a href="#" class="cate1">밥 · 죽</a>
+                            <ul class="drawer">
+                                <li><a href="#">죽류</a></li>
+                                <li><a href="#">초밥</a></li>
+                                <li><a href="#">볶음밥 · 비빔밥</a></li>
+                                <li><a href="#">김밥</a></li>
+                            </ul>
+                        </li>    
+                        </li>
+                        <li class="cate">
+                            <a href="#" class="cate1">면류</a>
+                            <ul class="drawer">
+                                <li><a href="#">중식</a></li>
+                                <li><a href="#">양식</a></li>
+                                <li><a href="#">일식</a></li>
+                                <li><a href="#">한식</a></li>
+                            </ul>
+                        </li>
+                        <li class="cate">
+                            <a href="#" class="cate1">찌개류</a>
+                            <ul class="drawer">
+                                <li><a href="#">맑은찌개</a></li>
+                                <li><a href="#">매운찌개</a></li>
+                                <li><a href="#">나베</a></li>
+                            </ul>
+                        <li class="cate">
+                            <a href="#" class="cate1">육류요리</a>
+                            <ul class="drawer">
+                                <li><a href="#">해산물</a></li>
+                                <li><a href="#">소고기</a></li>
+                                <li><a href="#">돼지고기</a></li>
+                                <li><a href="#">닭고기</a></li>
+                                <li><a href="#">양고기</a></li>
+                                <li><a href="#">야식</a></li>
+                            </ul>
+                        </li>
+                        <li class="cate">
+                            <a href="#" class="cate1">동남아</a>
+                            <ul class="drawer">
+                                <li><a href="#">분짜</a></li>
+                                <li><a href="#">월남쌈</a></li>
+                                <li><a href="#">쌀국수</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li class="cate">
+                            <a href="#" class="cate1">디저트</a>
+                            <ul class="drawer">
+                                <li><a href="#">푸딩</a></li>
+                                <li><a href="#">전통 디저트</a></li>
+                                <li><a href="#">쿠키</a></li>
+                                <li><a href="#">빼빼로</a></li>
+                            </ul>
+                        </li>
+                        <li class="cate">
+                            <a href="#" class="cate1">분식</a>
+                            <ul class="drawer">
+                                <li><a href="#">떡볶이</a></li>
+                                <li><a href="#">튀김</a></li>
+                                <li><a href="#">만두</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>  
+            <div class="search">
+                <input type="text" name="item"  placeholder="검색어를 입력하세요" ><span class="material-icons">search</span></input>
+            </div> 
+            <div class="navigation">
+                <div><a href="notice.html">공지사항</a></div>
+                <div><a href="qna.html">질의응답</a></div>
+                <div><a href="goCart.html">장바구니</a></div>
+                <div><a href="MyPage.html">마이페이지</a></div>
+                <div><a href="login.html">로그인</a></div>
+            </div>
+        </header>
+  <div class="sumcontainer">
+    <h2>주문내역</h2>
+
+    <div class="section">
+      <h3>주문정보</h3>
+      <div class="info-group">
+        <span>주문번호: <span class="highlight">12345-67890</span></span>
+      </div>
+      <div class="info-group">
+        <span>결제수단: <span class="highlight" id="payment-method"></span></span>
+      </div>
+    </div>
+
+    <div class="sumsection">
+      <h3>배송정보</h3>
+      <div class="info-group">
+        <span>이름: <span class="highlight" id="customer-name"></span></span>
+      </div>
+      <div class="info-group">
+        <span>전화번호: <span class="highlight" id="customer-phone"></span></span>
+      </div>
+      <div class="info-group">
+        <span>이메일: <span class="highlight" id="customer-email"></span></span>
+      </div>
+      <div class="info-group">
+        <span>주소: <span class="highlight" id="customer-address"></span></span>
+      </div>
+    </div>
+
+    <div class="sumsection">
+      <h3>주문상품</h3>
+      <div id="order-items">
+        <!-- 주문 상품 목록이 동적으로 추가됩니다 -->
+      </div>
+      <div class="total-section">
+        <div>
+          <span>상품금액</span>
+          <span id="product-price">19,000원</span>
+        </div>
+        <div>
+          <span>배송비</span>
+          <span id="delivery-fee">3,000원</span>
+        </div>
+        <div class="total">
+          <span>총 결제금액</span>
+          <span id="total-price">22,000원</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sumfooter">
+      <span>주문이 정상적으로 접수되었습니다.</span>
+    </div>
+  </div>
+
+  <script>
+    // 주문내역 데이터를 불러와 화면에 반영
+    const orderData = JSON.parse(localStorage.getItem('orderData')) || {};
+
+    // 배송정보 반영
+    document.getElementById('customer-name').innerText = orderData.name || 'N/A';
+    document.getElementById('customer-phone').innerText = orderData.phone || 'N/A';
+    document.getElementById('customer-email').innerText = orderData.email || 'N/A';
+    document.getElementById('customer-address').innerText = orderData.address || 'N/A';
+    document.getElementById('payment-method').innerText = orderData.payment || 'N/A';
+
+    // 주문상품 표시
+    const orderItemsContainer = document.getElementById('order-items');
+    if (orderData.items) {
+      orderData.items.forEach(item => {
+        const orderItem = document.createElement('div');
+        orderItem.classList.add('order-items');
+        orderItem.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+          <div>
+            <span>${item.name}</span>
+            <span>${item.price}원</span>
+            <span>${item.quantity}개</span>
+          </div>
+        `;
+        orderItemsContainer.appendChild(orderItem);
+      });
+    }
+
+    // 가격 정보 업데이트
+    document.getElementById('product-price').innerText = orderData.productPrice || '0원';
+    document.getElementById('delivery-fee').innerText = orderData.deliveryFee || '0원';
+    document.getElementById('total-price').innerText = orderData.totalPrice || '0원';
+  </script>
+    <footer>
+      <!--위로 스크롤 쭉올리는 버튼 -->
+      <div class="up"><span class="material-icons">expand_less</span></div>
+      <div>
+          <ul>
+              <li><a href="index.html">CookingBox</a></li>
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보취급방침</a></li>
+              <li><a href="#">환불정책</a></li>
+          </ul>
+          <section>
+              <strong>고객센터 이용안내</strong><br/>
+              <span>문의  010-0000-0000</span>
+              <ul>
+                  <li>월~금 | AM 9:00 - PM 05:00</li>
+                  <li>점심시간 | PM 12:00 - PM 01:00</li>
+                  <li>공휴일 | <span>closed</span></li>
+              </ul>
+              <ul><li><h3>입금계좌</h3></li>
+                  <li>국민은행 000000000000</li>
+                  <li>신한은행 000000000000</li>
+                  <li>예금주 | 쿠킹박스</li>
+              </ul>
+          </section>
+          <section>
+              <strong>주식회사 CookingBox</strong>
+              <ul>
+                  <li>서울특별시 강서구 강서동 10111 11101호</li>
+                  <li>이메일 | cookingbox@gmail.com</li>
+              </ul>
+              <ul>
+                  <li>* 주식회사 쿠킹박스사이트의 상품/판매자/쇼핑정보, 컨텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는  </li>
+                  <li>저작권법, 콘텐츠사업 진흥법 등에 의하여 엄격히 금지됩니다. </li>
+              </ul>
+          </section>
+          <section>
+              <strong>MEMBER</strong>
+              <ul>
+                  <li><a href="goCart.html">장바구니</a></li>
+                  <li><a href="MyPage.html">마이페이지</a></li>
+                  <li><a href="#">주문조회</a></li>
+                  <li><a href="#">회원정보수정</a></li>
+                  <li><a href="#">관심상품</a></li>
+              </ul>
+          </section>
+          <section class="footerinfo">
+              <ul>
+                  <li>대표 신서영, 박서영</li>
+                  <li>사업문의 | 000-00-00000 </li>
+                  <li>사업자등록번호 | 0000000000</li>
+              </ul>
+          </section>
+      </div>
+  </footer>
+</body>
+</html>
